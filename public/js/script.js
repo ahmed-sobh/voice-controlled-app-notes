@@ -79,6 +79,20 @@ recognition.onresult = function (event) {
   noteTextArea.value = noteContent.trim()
 }
 
+/*------------------------
+      Speech Synthesis
+--------------------------*/
+
+function readOutLoud(content) {
+  const speech = new SpeechSynthesisUtterance()
+
+  speech.text = content
+  speech.volume = 1
+  speech.rate = 1
+  speech.pitch = 1
+
+  window.speechSynthesis.speak(speech)
+}
 
 /*-------------------------------
         App buttons and input
@@ -95,10 +109,11 @@ pauseRecordBtn.addEventListener('click', pauseRecognition)
 saveNoteBtn.addEventListener('click', addNote)
 
 notes.addEventListener('click', e => {
+  e.preventDefault()
   const target = e.target
 
   if (target.matches('.listen-note')) {
-    console.log('Listening to note')
+    readOutLoud(target.parentNode.parentNode.querySelector('.content').textContent)
   } else if (target.matches('.delete-note')) {
     deleteNote(target.parentNode.parentNode)
   }

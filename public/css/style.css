@@ -1,9 +1,10 @@
 :root {
   --text-color: #111;
+  
   --pay-attention: #e64427;
-
   --focus-area: #ff6347;
 }
+
 html {
   font-size: 62.5%;
 }
@@ -31,6 +32,7 @@ body {
   padding: 5rem 2.5rem;
   /* background: red; */
 }
+
 .heading-secondary, .no-browser-support, .heading-primary{
   font-weight: inherit;
 }
