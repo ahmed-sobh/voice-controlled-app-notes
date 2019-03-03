@@ -1,0 +1,15 @@
+{
+  "name": "voice-controlled-notes-app",
+  "version": "1.0.0",
+  "description": "Sample voice-controlled notes app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Sobh",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
